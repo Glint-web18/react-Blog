@@ -42,7 +42,7 @@ export default function TopBar() {
                         <Link style= {{textDecoration:'none', color:"inherit"}} to ="/login">Login</Link>
                     </li>
                     <li className = "topListItem">
-                        <Link style= {{textDecoration:'none', color:"inherit"}} to ="/register">Regiser</Link>
+                        <Link style= {{textDecoration:'none', color:"inherit"}} to ="/register">Register</Link>
                     </li>
                 </ul>
             )}
