@@ -19,16 +19,6 @@ mongoose.connect(process.env.MONGO_URL, {
 .then(console.log("Connected to MongoDB"))
 .catch(err=>console.log(err));
 
-const storage = multer.diskStorage({
-    destination: (req, file, cb)=>{
-        cb(null, "images");
-
-    },
-    filename: (req, file, cb)=>{
-        cb(null, "hell.jpeg");
-    },
-});
-
 // Add headers before the routes are defined
 app.use(function (req, res, next) {
 
@@ -48,6 +38,18 @@ app.use(function (req, res, next) {
     // Pass to next layer of middleware
     next();
 });
+
+const storage = multer.diskStorage({
+    destination: (req, file, cb)=>{
+        cb(null, "images");
+
+    },
+    filename: (req, file, cb)=>{
+        cb(null, "hell.jpeg");
+    },
+});
+
+
 
 const upload = multer({storage: storage});
 app.post("/api/upload", upload.single("file"), (req, res)=>{
