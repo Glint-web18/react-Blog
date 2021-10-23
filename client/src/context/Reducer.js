@@ -3,19 +3,19 @@ const Reducer = (state, action)=>{
         case "LOGIN_START":
             return{
                 user: null,
-                isfetching: true,
+                isFetching: true,
                 error:false,
             };
-        case "LOGIN_SUCESSS":
+        case "LOGIN_SUCCESSS":
             return{
                 user: action.payload,
-                isfetching: false,
+                isFetching: false,
                 error:false,
             };
         case "LOGIN_FAILURE":
             return{
                 user: null,
-                isfetching: false,
+                isFetching: false,
                 error:true,
             };
             default:

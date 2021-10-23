@@ -1,9 +1,9 @@
-export const LoginStart = (userCrendentials) => ({
+export const LoginStart = (userCredentials) => ({
     type: "LOGIN_START"
 });
 
 export const LoginSucess = (user) =>({
-    type: "LOGIN_SUCESSS",
+    type: "LOGIN_SUCCESSS",
     payload: user,
 });
 
