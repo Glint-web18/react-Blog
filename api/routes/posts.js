@@ -43,17 +43,6 @@ router.put("/:id", async (req, res) =>{
    }
 });
 
-//Update Post
-router.post("/", async (req, res) =>{
-    const newPost = new Post(req.body)
-     try {
-         const savedPost = await newPost.save();
- 
-         res.status(200).json(savedPost)
-     } catch (err) {
-         res.status(500).json(err)
-     }
- })
  
  //Delete Post
  router.delete("/:id", async (req, res) =>{
